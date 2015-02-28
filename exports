@@ -1,0 +1,19 @@
+/hdfs/1/shared hadoop1(rw,no_root_squash)
+/hdfs/1/shared hadoop2(rw,no_root_squash)
+/hdfs/1/shared hadoop3(rw,no_root_squash)
+/hdfs/1/shared hadoop4(rw,no_root_squash)
+/hdfs/1/shared hadoop5(rw,no_root_squash)
+/hdfs/1/shared hadoop6(rw,no_root_squash)
+/hdfs/1/shared hadoop7(rw,no_root_squash)
+/hdfs/1/shared hadoop8(rw,no_root_squash)
+/hdfs/1/shared hadoop9(rw,no_root_squash)
+/hdfs/1/shared hadoop10(rw,no_root_squash)
+
+
+
+
+
+
+
+
+

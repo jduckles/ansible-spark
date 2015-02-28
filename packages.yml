@@ -1,0 +1,29 @@
+---
+- hosts: hadoop
+  remote_user: root
+  tasks:
+    - name: Docker
+      yum: name=docker-io state=present
+    - name: SELinux Python bindings
+      yum: name=libselinux-python state=present
+    - name: install 'Git' on nodes
+      yum: name=git state=present
+    - name: install supervisor
+      yum: name=supervisor state=present
+    - name: Install nsf
+      yum: name=nfs-utils state=present
+    - name: Install NSF utils
+      yum: name=nfs-utils-lib state=present
+    - name: tmux
+      yum: name=tmux state=present
+    - name: screen
+      yum: name=screen state=present
+    - action: copy src=exports dest=/etc/exports
+    - action: command exportfs -a
+    - action: command service rpcbind start
+    - action: command service nfs start
+    - action: command /sbin/chkconfig nfs on
+    - action: command /sbin/chkconfig rpcbind on
+    - file: path=/hdfs/1/share state=directory
+    - file: path=/mnt/shared10 state=directory
+    - mount: name=/mnt/shared10 src=hadoop10:/hdfs/1/shared fstype=nfs state=mounted
