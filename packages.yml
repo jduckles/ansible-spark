@@ -27,3 +27,9 @@
     - file: path=/hdfs/1/share state=directory
     - file: path=/mnt/shared10 state=directory
     - mount: name=/mnt/shared10 src=hadoop10:/hdfs/1/shared fstype=nfs state=mounted
+    - user: name=ceph password=VoLW6JjEOu.K6 groups=wheel
+    - yum: name=ntp state=present
+    - yum: name=ntpdate state=present
+    - yum: name=ntp-doc state=present
+    - yum: name=yum-plugin-priorities state=present
+    - authorized_key: user=ceph key="ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4QF65E2m+zAVNSqzcnuQ/rNIbYtF8Y4TJ3K/vkNryESvfmFDWTpaKWQUGk40FUDZTL0CaAt3rvRJNc0weyJUukGxn0Lc1pQUKjDotM3WEzeoUg5TuY+tCVmHzYH44Exu7rgMeav6ZRfF20QGO4D2w0NowomhNaYGgJUvChA2H3zN8KpR5Gh3o7QpvmLOTYYCX51M70ntB49UeSv7FPRflooL0fA21LOCU8F3wwG3wkvLycfIs+iVovoi+PWE4dEiWXI10du5Ep8XJm8vzcQETm/ynxun2bQIW/xEH+18lwGXLq955cgPTTUEcGRZ6CB27rvHxszSMmyBEvqnljRl+Q== ceph@hadoop1"
