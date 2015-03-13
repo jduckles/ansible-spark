@@ -18,6 +18,8 @@
       yum: name=tmux state=present
     - name: screen
       yum: name=screen state=present
+    - name: iperf
+      yum: name=iperf state=present
     - action: copy src=exports dest=/etc/exports
     - action: command exportfs -a
     - action: command service rpcbind start
